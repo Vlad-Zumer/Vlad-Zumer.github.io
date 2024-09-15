@@ -20,4 +20,5 @@ LOCAL_IP=${LOCAL_IP:-`ipconfig.exe | grep -im1 'IPv4 Address' | cut -d ':' -f2 |
 ## start server
 ## use 0.0.0.0 to bind so we can use both localhost and the actual local ip to access the site 
 ## (needed for connectinv via local network)
-hugo server -D --gc --noHTTPCache --watch --disableFastRender --port 1313 --bind 0.0.0.0 --baseURL http://$LOCAL_IP
+# hugo server -D --gc --noHTTPCache --watch --disableFastRender --port 1313 --bind 0.0.0.0 --baseURL http://$LOCAL_IP
+hugo server -D --gc --watch --disableFastRender --port 1313 --bind 0.0.0.0 --baseURL http://$LOCAL_IP
