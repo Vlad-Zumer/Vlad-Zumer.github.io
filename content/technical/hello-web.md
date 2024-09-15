@@ -1,8 +1,8 @@
 +++
 title = 'Hello Web!'
-date = 2024-09-14T23:06:16+01:00
-lastmod = 2024-09-14T23:06:16+01:00
-draft = true
+date = 2024-09-15T12:06:16+01:00
+# lastmod = 
+draft = false
 
 # Taxonomies
 areas = ['programming']
