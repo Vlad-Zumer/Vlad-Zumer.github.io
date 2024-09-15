@@ -1,0 +1,31 @@
+baseURL = 'https://example.org/'
+languageCode = 'en'
+title = 'zlog'
+theme = 'postz-fs'
+
+
+summaryLength = 20
+
+[taxonomies]
+area = "areas"
+tag = "tags"
+
+[params]
+math = true
+favicon = "/favicon.svg"
+author = 'Vlad-Alexandru Zumer'
+github-page = 'https://github.com/Vlad-Zumer'
+no-inflect-types = ['maths']
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.goldmark.extensions.passthrough]
+enable = true
+
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['$$', '$$']]
+inline = [['$', '$']]
+
+
+
