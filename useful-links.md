@@ -1,0 +1,1 @@
+- https://katex.org/docs/supported#big-operators
