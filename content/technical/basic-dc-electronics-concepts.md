@@ -2,7 +2,7 @@
 title = 'Basic DC Electronics Concepts'
 date = 2026-04-11T16:29:34+01:00
 # lastmod = 2026-04-11T16:29:34+01:00
-draft = true
+draft = false
 
 # Taxonomies
 areas = ['electronics']
