@@ -1,7 +1,7 @@
 +++
 title = 'Basic DC Electronics Concepts'
 date = 2026-04-11T16:29:34+01:00
-# lastmod = 2026-04-11T16:29:34+01:00
+lastmod = 2026-04-13T14:14:33+01:00
 draft = false
 
 # Taxonomies
@@ -65,8 +65,14 @@ The next most common concept you will have heard of is "voltage" or "volts", so 
 ### Ground[^3]
 A closely related concept to this is the "ground" or "earth". This is usually a reference point from which to measure voltages in the system, $V_{ground}=0$ always, but it may also be an electrical connection to a neutral node that has a lot of available charges. In the water-pipes analogy we have been using think of it as the sea/ocean.
 
-
-<!-- $$ !!\ TODO: image!! $$ -->
+{{< figure
+  src="basic-dc-concepts/component-schematic/ground.png"
+  alt="A filled in circle with a line going down vertically from it center intersecting another segment in the middle, perpendicularly, and 2 progressively smaller segments parallel the latter positioned below."
+  caption="Figure 1: Electrical symbol for ground"
+  class="center-x"
+  img-class="image-full-content"
+  id="fig:1"
+>}}
 
 ### Power[^4]
 Another common concept you will have heard of is "power" or "wattage" ($P$). This is the rate of transfer of electrical energy, it is equal to the current multiplied by the potential differential ($P=I\cdot{}V$), and it is measured in $watts$ ($W$). Using the water-pipes analogy again, this measures how much "work" could be done with a given water pressure and flow rate, akin to hydraulic systems.[^5]
@@ -92,38 +98,129 @@ What this is saying, using the water and pipes analogy from above, is that the d
 
 ## Components
 This is probably going to be the longest part of the article as I will try and go though common components and describe them in an intuitive way.
-This list is not exhaustive but is meant 
+This list is not exhaustive.
 
 ### Wires
 Possibly the simplest component, an ideal wire has no resistance and is used to connect other components together. In reality every wire has some resistance dependent on the material and area, but for most applications this resistance can be ignored.
 
-<!-- $$ !!\ TODO: image!! $$ -->
+{{< multi-figure
+  id="fig:2"
+  class="center-x"
+  caption="Figure 2: Wires"
+  rows=1
+  cols=2
+  sub-figures=`
+  [
+    {
+      "src": "basic-dc-concepts/component-irl-image/wire.jpg",
+      "alt": "Copper strands insulated by a plastic outer coating.",
+      "caption": "Fig 2.a:<br>Electrical wires"
+    },
+    {
+      "src": "basic-dc-concepts/component-schematic/wire.png",
+      "alt": "Just a line",
+      "caption": "Fig 2.b:<br>Electric symbol for wire"
+    }
+  ]
+  `
+>}}
 
 ### Constant current sources
 As the name suggests these sources provide a constant current to the circuit regardless of load (resistance). Thus the voltage at the terminals can vary depending on the resistance.
 
-<!-- $$ !!\ TODO: image!! $$ -->
+{{< multi-figure
+  id="fig:3"
+  class="center-x"
+  caption="Figure 3: Constant current source"
+  rows=1
+  cols=2
+  sub-figures=`
+  [
+    {
+      "src": "basic-dc-concepts/component-irl-image/power-supply.jpg",
+      "alt": "TODO",
+      "caption": "Fig 3.a:<br>Bench top power supply. (C.C symbol on the left is for constant current)"
+    },
+    {
+      "src": "basic-dc-concepts/component-schematic/constant-current-source.png",
+      "alt": "TODO",
+      "caption": "Fig 3.b:<br>Electric symbol for constant current source"
+    }
+  ]
+  `
+>}}
 
 ### Constant voltage sources
 As the name suggests these sources provide a voltage current to the circuit regardless of load (resistance). Thus the current inside the circuit can vary depending on the resistance.
 
-<!-- $$ !!\ TODO: image!! $$ -->
+{{< multi-figure
+  id="fig:4"
+  class="center-x"
+  caption="Figure 4: Constant voltage source"
+  rows=1
+  cols=2
+  sub-figures=`
+  [
+    {
+      "src": "basic-dc-concepts/component-irl-image/power-supply.jpg",
+      "alt": "TODO",
+      "caption": "Fig 4.a:<br>Bench top power supply. (C.V symbol on the right is for constant voltage)"
+    },
+    {
+      "src": "basic-dc-concepts/component-schematic/constant-voltage-source.png",
+      "alt": "TODO",
+      "caption": "Fig 4.b:<br>Electric symbol for constant voltage source"
+    }
+  ]
+  `
+>}}
 
 #### Batteries
 For the most part batteries can be thought of as constant voltage sources. In reality the voltage of a battery depends on its charge level and decreases as the battery is being used. Thus even a relatively charged battery may not produce it's printed voltage value.
 
-<!-- $$ !!\ TODO: image!! $$ -->
+{{< figure
+  src="basic-dc-concepts/component-irl-image/batteries.jpg"
+  alt="TODO"
+  caption="Figure 5: Batteries"
+  class="center-x"
+  img-class="image-full-content"
+  id="fig:5"
+>}}
 
 ### Resistors
 These are the next simplest passive component in a circuit, their role is usually to reduce the current flowing through the circuit in order to protect more delicate components. They do this by resisting the flow of current. They consume some energy that is converted to heat.
 
-<!-- $$ !!\ TODO: image!! $$ -->
+{{< multi-figure
+  id="fig:6"
+  class="center-x"
+  caption="Figure 6: Resistors"
+  rows=2
+  cols=2
+  sub-figures=`
+  [
+    {
+      "src": "basic-dc-concepts/component-irl-image/resistors-1.png",
+      "alt": "TODO",
+      "caption": "Fig 6a:<br>Image of axial-lead resistors of varying resistance.",
+      "row-span": 2
+    },
+    {
+      "src": "basic-dc-concepts/component-schematic/fixed-resistor.png",
+      "alt": "TODO",
+      "caption": "Fig 6.b:<br>Electric symbol for fixed resistor"
+    },
+    {
+      "src": "basic-dc-concepts/component-schematic/variable-resistor.png",
+      "alt": "TODO",
+      "caption": "Fig 6.c:<br>Electric symbol for variable resistor"
+    }
+  ]
+  `
+>}}
 
 #### Equivalent resistance
 - When 2+ resistors are on the same wire, connected one after the other, their equivalent resistance is the sum of their individual resistances. (Series)
 - When 2+ resistors are connected to the same **2** points then their inverse resistance is equal to the sum of the inverse of each individual resistance. (Parallel)
-
-<!-- $$ !!\ TODO: image!! $$ -->
 
 $$
 \begin{aligned}
@@ -131,6 +228,28 @@ $$
   \frac{1}{R_{parallel}} & = \sum_{i=0}^{n} \frac{1}{R_{i}}
 \end{aligned}
 $$
+
+{{< multi-figure
+  id="fig:7"
+  class="center-x"
+  caption="Figure 7: Series and parallel resistors"
+  rows=1
+  cols=2
+  sub-figures=`
+  [
+    {
+      "src": "basic-dc-concepts/component-schematic/resistor-series.png",
+      "alt": "TODO",
+      "caption": "Fig 7a:<br>Image of fixed resistors connected in series."
+    },
+    {
+      "src": "basic-dc-concepts/component-schematic/resistor-parallel.png",
+      "alt": "TODO",
+      "caption": "Fig 7.b:<br>Image of fixed resistors connected in parallel."
+    }
+  ]
+  `
+>}}
 
 ### Switches/Buttons
 The role of these components is to switch the path that current flows through. They can also be used to fully disconnect part of the system.
