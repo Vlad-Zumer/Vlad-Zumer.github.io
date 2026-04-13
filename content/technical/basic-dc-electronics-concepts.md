@@ -1,7 +1,7 @@
 +++
 title = 'Basic DC Electronics Concepts'
 date = 2026-04-11T16:29:34+01:00
-lastmod = 2026-04-13T14:14:33+01:00
+lastmod = 2026-04-13T20:00:00+01:00
 draft = false
 
 # Taxonomies
@@ -201,7 +201,7 @@ These are the next simplest passive component in a circuit, their role is usuall
     {
       "src": "basic-dc-concepts/component-irl-image/resistors-1.png",
       "alt": "TODO",
-      "caption": "Fig 6a:<br>Image of axial-lead resistors of varying resistance.",
+      "caption": "Fig 6a:<br>Image of axial-lead resistors of varying resistance",
       "row-span": 2
     },
     {
@@ -240,12 +240,12 @@ $$
     {
       "src": "basic-dc-concepts/component-schematic/resistor-series.png",
       "alt": "TODO",
-      "caption": "Fig 7a:<br>Image of fixed resistors connected in series."
+      "caption": "Fig 7a:<br>Image of fixed resistors connected in series"
     },
     {
       "src": "basic-dc-concepts/component-schematic/resistor-parallel.png",
       "alt": "TODO",
-      "caption": "Fig 7.b:<br>Image of fixed resistors connected in parallel."
+      "caption": "Fig 7.b:<br>Image of fixed resistors connected in parallel"
     }
   ]
   `
@@ -256,29 +256,140 @@ The role of these components is to switch the path that current flows through. T
 
 Buttons are a special kind of switches that are normally "off" which means that by default no current flows through them.
 
-<!-- $$ !!\ TODO: image!! $$ -->
+{{< multi-figure
+  id="fig:8"
+  class="center-x"
+  caption="Figure 8: Switches and buttons"
+  rows=2
+  cols=2
+  sub-figures=`
+  [
+    {
+      "src": "basic-dc-concepts/component-irl-image/switch.png",
+      "alt": "TODO",
+      "caption": "Fig 8.a:<br>Image of a switch"
+    },
+    {
+      "src": "basic-dc-concepts/component-schematic/switch.png",
+      "alt": "TODO",
+      "caption": "Fig 8.b:<br>Electric symbol for a switch"
+    },
+    {
+      "src": "basic-dc-concepts/component-irl-image/buttons.png",
+      "alt": "TODO",
+      "caption": "Fig 8.c:<br>Image of a button"
+    },
+    {
+      "src": "basic-dc-concepts/component-schematic/button.png",
+      "alt": "TODO",
+      "caption": "Fig 8.d:<br>Electric symbol for a button"
+    }
+  ]
+  `
+>}}
 
 ### Fuses
 An ideal fuse behaves like an ideal wire ($R=0$) until it reaches its limit at which point it should act as a perfect insulator ($R=\infty$). They are useful for protecting circuits from current surges that would damage expensive components or cause injuries (e.g. fires).
 
 Most common ones I have encountered are a made from a piece of conductive material, encased in either glass or ceramic, with a specific resistance such that it will fail (melt/burn) when the current exceeds the safe value.
 
-<!-- $$ !!\ TODO: image!! $$ -->
+{{< multi-figure
+  id="fig:9"
+  class="center-x"
+  caption="Figure 9: Fuses"
+  rows=1
+  cols=2
+  sub-figures=`
+  [
+    {
+      "src": "basic-dc-concepts/component-irl-image/fuses.png",
+      "alt": "TODO",
+      "caption": "Fig 9.a:<br>Image of different types of fuses"
+    },
+    {
+      "src": "basic-dc-concepts/component-schematic/fuse.png",
+      "alt": "TODO",
+      "caption": "Fig 9.b:<br>Electric symbol for a fuse"
+    }
+  ]
+  `
+>}}
 
 ### Traditional Light bulbs
 Traditional light bulbs are very close in construction to the latter fuses I described. They work by passing current through a wire that heats up enough to generate light. This filament is then encased in a glass bulb and put under vacuum or filled with some other inert gas to prevent the filament from catching fire/oxidizing due to the high temperatures.
 
-<!-- $$ !!\ TODO: image!! $$ -->
+{{< multi-figure
+  id="fig:10"
+  class="center-x"
+  caption="Figure 10: Fuses"
+  rows=1
+  cols=2
+  sub-figures=`
+  [
+    {
+      "src": "basic-dc-concepts/component-irl-image/light-bulb.png",
+      "alt": "TODO",
+      "caption": "Fig 10.a:<br>Image of an incandescent light bulb"
+    },
+    {
+      "src": "basic-dc-concepts/component-schematic/light-bulb.png",
+      "alt": "TODO",
+      "caption": "Fig 10.b:<br>Electric symbol for a light bulb"
+    }
+  ]
+  `
+>}}
 
 ### Diodes
 These components are used to keep the flow of current in only one direction. An ideal diode behaves like an ideal wire when current passes in the forward direction ($R_{forward}=0$), and as a perfect insulator when current tries to pass in the opposite direction ($R_{backward}=\infty$). In reality there is some internal resistance for the forward direction, and there is a current at which the diode will start to allow current in the opposite direction.
 
-<!-- $$ !!\ TODO: image!! $$ -->
+{{< multi-figure
+  id="fig:11"
+  class="center-x"
+  caption="Figure 11: Diodes"
+  rows=1
+  cols=2
+  sub-figures=`
+  [
+    {
+      "src": "basic-dc-concepts/component-irl-image/diodes.png",
+      "alt": "TODO",
+      "caption": "Fig 11.a:<br>Image of a pile of diodes"
+    },
+    {
+      "src": "basic-dc-concepts/component-schematic/diode.png",
+      "alt": "TODO",
+      "caption": "Fig 11.b:<br>Electric symbol for a diode"
+    }
+  ]
+  `
+>}}
 
 #### LEDs
 Probably the most common type of light recently, name "LED" stands for "light emitting diode". As the name suggests these are diodes that also emit light, as such, unlike the traditional light bulbs, they have a concept of "forward direction" for the current and will not work otherwise. Another difference is that they do not emit light due to black-body radiation[^7] (heat). 
 
-<!-- $$ !!\ TODO: image!! $$ -->
+<!-- TODO: Fix images not starting at the same height -->
+{{< multi-figure
+  id="fig:12"
+  class="center-x"
+  caption="Figure 12: LEDs (<ins>**L**</ins>ight <ins>**E**</ins>mitting <ins>**D**</ins>iodes)"
+  rows=1
+  cols=2
+  sub-figures=`
+  [
+    {
+      "src": "basic-dc-concepts/component-irl-image/leds.png",
+      "alt": "TODO",
+      "caption": "Fig 12.a:<br>Image of a pile of green LEDs"
+    },
+    {
+      "src": "basic-dc-concepts/component-schematic/led.png",
+      "alt": "TODO",
+      "caption": "Fig 12.b:<br>Electric symbol for a LED"
+    }
+  ]
+  `
+>}}
 
 ### Capacitors
 A capacitor is a device that stores electrical energy by accumulating electric charges. This is usually done by having 2 electric conductor surfaces, that store the charges, close together separated by an insulator. A capacitor is characterized by a constant $capacitance$[^8] ($C$) measured in $farads$ ($F$), defined as the ratio of charge ($Q$) on each conductor surface to the voltage ($V$) between them. The accumulation of these charges is a direct consequence of the voltage.
@@ -291,14 +402,55 @@ When a capacitor is disconnected from a live circuit the charge stored in it wil
 
 <ins>**_Be careful when connecting a capacitor to a closed circuit!_**</ins> Because the charge accumulated by the capacitor is only there due to the previous voltage, when connected to a closed circuit the capacitor will have am equal voltage between its leads, which can lead to current spikes though the circuit.
 
-<!-- $$ !!\ TODO: image!! $$ -->
+{{< multi-figure
+  id="fig:13"
+  class="center-x"
+  caption="Figure 13: Capacitors"
+  rows=1
+  cols=3
+  sub-figures=`
+  [
+    {
+      "src": "basic-dc-concepts/component-irl-image/capacitors.png",
+      "alt": "TODO",
+      "caption": "Fig 13.a:<br>Image of different types of capacitors",
+      "col-span":2
+    },
+    {
+      "src": "basic-dc-concepts/component-schematic/capacitor.png",
+      "alt": "TODO",
+      "caption": "Fig 13.b:<br>Electric symbol for a capacitor"
+    }
+  ]
+  `
+>}}
 
 ### Inductors
 An inductor is a component that stores energy in a magnetic field when an electric current flows through it. An inductor typically consists of an insulated wire wound into a coil. An inductor is characterized by its $inductance$[^9] ($L$), which I don't understand well enough to explain it here yet.
 
 The most important thing to remember though is that <ins>**_inductors oppose any changes in current through them_**</ins>. Which means we should be careful when disconnecting them because that can lead to spiking voltages and electric arcs.
 
-<!-- $$ !!\ TODO: image!! $$ -->
+{{< multi-figure
+  id="fig:14"
+  class="center-x"
+  caption="Figure 14: Inductors"
+  rows=1
+  cols=2
+  sub-figures=`
+  [
+    {
+      "src": "basic-dc-concepts/component-irl-image/inductors.png",
+      "alt": "TODO",
+      "caption": "Fig 14.a:<br>Image of different types of inductors (coils)"
+    },
+    {
+      "src": "basic-dc-concepts/component-schematic/inductor.png",
+      "alt": "TODO",
+      "caption": "Fig 14.b:<br>Electric symbol for a inductor"
+    }
+  ]
+  `
+>}}
 
 ### Transistors
 Transistors can be thought of as switches that are controlled by current or voltage. They usually have 3 leads/wires coming out of them: base/gate, source/collector, drain/emitter. The gate as the name suggests controls the current that flows between the collector and emitter. Usually small changes in the gate's input result in bigger changes to the current between the collector and emitter, so they can be used for amplification as well.
@@ -306,17 +458,77 @@ Transistors can be thought of as switches that are controlled by current or volt
 #### BJTs
 BJT stands for "bipolar junction transistor" and it uses a small current between the base and emitter terminals to control a higher current between the collector and emitter terminals.
 
-<!-- $$ !!\ TODO: image!! $$ -->
+{{< multi-figure
+  id="fig:15"
+  class="center-x"
+  caption="Figure 15: BJT"
+  rows=1
+  cols=2
+  sub-figures=`
+  [
+    {
+      "src": "basic-dc-concepts/component-irl-image/bjts.png",
+      "alt": "TODO",
+      "caption": "Fig 15.a:<br>Image of a pile of KT3102 BJTs"
+    },
+    {
+      "src": "basic-dc-concepts/component-schematic/npn-bjt.png",
+      "alt": "TODO",
+      "caption": "Fig 15.b:<br>Electric symbol for a NPN BJT"
+    }
+  ]
+  `
+>}}
 
 #### FETs
 FET stans for "field-effect transistor" and it uses a voltage between the gate and source to control the current between the source and drain. The advantage of FETs is that no current has to go through the gate for it to be controlled. MOSFETs are special type of FET with the further advantage that the circuit behind the gate can be isolated from the high current between the source and drain.
 
-<!-- $$ !!\ TODO: image!! $$ -->
+{{< multi-figure
+  id="fig:16"
+  class="center-x"
+  caption="Figure 16: FETs"
+  rows=1
+  cols=2
+  sub-figures=`
+  [
+    {
+      "src": "basic-dc-concepts/component-irl-image/mosfet.png",
+      "alt": "TODO",
+      "caption": "Fig 16.a:<br>Image of IRF630 MOSFET"
+    },
+    {
+      "src": "basic-dc-concepts/component-schematic/n-fet.png",
+      "alt": "TODO",
+      "caption": "Fig 16.b:<br>Electric symbol for a n-channel FET"
+    }
+  ]
+  `
+>}}
 
 ### Relay
 A relay is an electrically operated mechanical switch, usually used for high current applications where full isolation of the control circuit is required. They are usually comprised of an electromagnet that closes or opens the controlled circuit.
 
-<!-- $$ !!\ TODO: image!! $$ -->
+{{< multi-figure
+  id="fig:17"
+  class="center-x"
+  caption="Figure 17: Relays"
+  rows=1
+  cols=2
+  sub-figures=`
+  [
+    {
+      "src": "basic-dc-concepts/component-irl-image/relay.png",
+      "alt": "TODO",
+      "caption": "Fig 17.a:<br>Image of a relay"
+    },
+    {
+      "src": "basic-dc-concepts/component-schematic/relay.png",
+      "alt": "TODO",
+      "caption": "Fig 17.b:<br>Electric symbol for a switching relay"
+    }
+  ]
+  `
+>}}
 
 [^1]: [Electric current (wikipedia)](https://en.wikipedia.org/wiki/Electric_current)
 [^2]: [Voltage (wikipedia)](https://en.wikipedia.org/wiki/Voltage)
